@@ -1,10 +1,10 @@
-﻿// модуль
+﻿// Absolute value
 Console.Write("Number to get absolute: ");
 string number_str = Console.ReadLine();
 double number = double.Parse(number_str);
 if (number < 0) { number = -number; }
 Console.WriteLine($"Absolute value of {number_str} is {number}");
-// обратимость
+// Inverse
 
 Console.Write("Number to get inverse: ");
 string inverse_str = Console.ReadLine();
