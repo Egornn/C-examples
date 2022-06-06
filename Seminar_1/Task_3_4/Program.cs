@@ -2,7 +2,7 @@
 Console.Write ("введите число ");
 string str = Console.ReadLine();
 double a = double.Parse(str);
-double answer = Math.Pow(a, 3); 
+double answer =Math.Pow(a, 3); 
 Console.WriteLine($"Число в кубе - {answer}");
 
 // Получаем число N, выводим числа от -N до N
