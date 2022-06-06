@@ -1,4 +1,4 @@
-﻿//Greater and leeser number out of 3
+﻿//Greater number out of 3
 Console.Write("Insert the first number: ");
 string first_str = Console.ReadLine();
 Console.Write("Insert the second number: ");
