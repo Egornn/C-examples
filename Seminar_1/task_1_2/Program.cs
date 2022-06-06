@@ -22,3 +22,14 @@ else
 
 // По номеру дня недели вывести название дня недели
 
+Console.Write("Введите день ");
+string day = Console.ReadLine();
+int number = int.Parse(day);
+    number = number % 7;
+if (number == 0) {Console.WriteLine("Sunday");}
+if (number == 1) {Console.WriteLine("Monday");}
+if (number == 2) {Console.WriteLine("Tuesday");}
+if (number == 3) {Console.WriteLine("Wednessday");}
+if (number == 4) {Console.WriteLine("Thursday");}
+if (number == 5) {Console.WriteLine("Friday");}
+if (number == 6) {Console.WriteLine("Saturday");}
