@@ -7,19 +7,15 @@ string str_2 = Console.ReadLine();
 int a = int.Parse(str_1);
 int b = int.Parse(str_2);
 
-if (a*a == b) {
+if ((a * a == b) || (a == b * b))
+{
     Console.WriteLine("Да, является квадратом");
 }
-else {
-    if (a == b*b)
-    { 
-        Console.WriteLine("Да, является квадратом");
-        }
-        else{
-            Console.WriteLine("Нет, не является квадратом");
-        }
-     
+else
+{
+    Console.WriteLine("Нет, не является квадратом");
 }
+
 
 
 
