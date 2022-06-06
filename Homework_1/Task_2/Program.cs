@@ -13,7 +13,7 @@ double third = double.Parse(third_str);
 
 double max = first;
 
-if (second>max) {max=second;}
-if (third>max) {max=third;}
+if (second > max) { max = second; }
+if (third > max) { max = third; }
 
 Console.WriteLine($"The greater one is {max}");
