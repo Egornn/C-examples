@@ -1,15 +1,16 @@
 ﻿int fib(int n)
 {
-    //if (n == 1 ) { return 0; }
-    int counter = 1;
+
+    if (n == 1 ) { return 0; }
+    int counter = 2;
     int FibonacciPrevious = 0;
     int FibonacciCurrent = 1;
-    int temp = 0;
+    int temp =0;
     while (counter < n)
     {
-        temp = FibonacciCurrent;
-        FibonacciCurrent = FibonacciCurrent + FibonacciPrevious;
-        FibonacciPrevious = temp;
+        temp=FibonacciCurrent;
+        FibonacciCurrent=FibonacciCurrent+FibonacciPrevious;
+        FibonacciPrevious=temp;
         counter++;
     }
     return FibonacciCurrent;
@@ -50,4 +51,5 @@ int FibTimeEff(int n)
 Console.WriteLine(fib(9));
 Console.WriteLine(fibRec(10));
 Console.WriteLine(FibTimeEff(11));
-Console.WriteLine(FibHashEquivalent(12));
+//Console.WriteLine(FibHashEquivalent(12));
+Console.WriteLine( fib(10));
