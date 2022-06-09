@@ -7,5 +7,10 @@ string second_str = Console.ReadLine();
 double first = double.Parse(first_str);
 double second = double.Parse(second_str);
 
+
 if (first > second) { Console.WriteLine($"The greater one is {first} and the lesser one is {second}"); }
-else { Console.WriteLine($"The greater one is {second} and the lesser one is {first}"); }
+else
+{
+    if (first == second) { Console.WriteLine($"They are the same - {first}"); }
+    Console.WriteLine($"The greater one is {second} and the lesser one is {first}");
+}
