@@ -37,16 +37,16 @@ int FibTimeEff(int n)
     return array[n - 1];
 }
 
-//int FibHashEquivalent(int n, Dictionary<int, int> memo = Dictionary[0,0])
-//{   //if (memo==0){memo= new Dictionary<int, int>();}
-//    memo.Add(1, 1);
-//    memo.Add(2, 1);
-//    if (memo.ContainsKey(n)) { return memo[n]; }
-//    else
-//    {
-//        memo[n] = FibHashEquivalent(n - 1) + FibHashEquivalent(n - 2);
-//    }
-//}
+int FibHashEquivalent(int n, Dictionary<int, int> memo = new Dictionary<int, int> (new memo { [1] = 1, [2] = 1}))
+{   //if (memo==0){memo= new Dictionary<int, int>();}
+   memo.Add(1, 1);
+   memo.Add(2, 1);
+   if (memo.ContainsKey(n)) { return memo[n]; }
+   else
+   {
+       memo[n] = FibHashEquivalent(n - 1,memo) + FibHashEquivalent(n - 2,memo);
+   }
+}
 
 Console.WriteLine(fib(9));
 Console.WriteLine(fibRec(10));
