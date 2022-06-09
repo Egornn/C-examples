@@ -1,13 +1,14 @@
 ﻿
 
 Console.WriteLine("Input 3 digit number");
-string numberStr = Console.ReadLine(); 
+string numberStr = Console.ReadLine();
 int number = int.Parse(numberStr);
 
 
-while (number<100 || number>=1000) {
+while (number < 100 || number >= 1000)
+{
     Console.WriteLine("Число не трехзначное. Повторите ввод");
-    numberStr = Console.ReadLine(); 
+    numberStr = Console.ReadLine();
     number = int.Parse(numberStr);
 }
 
