@@ -13,7 +13,7 @@ if (quadrants==2 || quadrants == 3)
 {
     x="<";
 } 
-if (quadrants==2 || quadrants == 3)
+if (quadrants==3 || quadrants == 4)
 {
     y="<";
 } 
