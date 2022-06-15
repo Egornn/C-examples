@@ -7,14 +7,19 @@ string prompt(string msg)
 }
 string number=prompt("Select a 5-digit number");
 
-
-if (number[0]  == number[4]&& number[1]  == number[3] ) 
+if (number.Length != 5)
 {
-    Console.WriteLine($"{number} is a palindrome");
+    Console.WriteLine($"{number} is not a 5-digit number");
 }
 else
 {
-    Console.WriteLine($"{number} is not a palindrome");
+    if (number[0]  == number[4]&& number[1]  == number[3] ) 
+    {
+        Console.WriteLine($"{number} is a palindrome");
+    }
+    else
+    {
+        Console.WriteLine($"{number} is not a palindrome");
+    }
 }
-
 
