@@ -6,9 +6,6 @@ string prompt(string msg)
     return coordinates;
 }
 
-string coordinates1 = prompt ("Input coorinates in the form x1, y1");
-//string coordinates2 = prompt ("Input coorinates in the form x2, y2");
-
 double Coordinate(string coordinates,string axis)
 {
     int comma = 0;
@@ -16,19 +13,49 @@ double Coordinate(string coordinates,string axis)
     int length = coordinates.Length;
     for (int counter = 0; counter <  length; counter++ )
     {
-        if (coordinates1[counter] == ',') 
+        if (coordinates[counter] == ',') 
         {
             comma=counter;
         }
     }
-    if (axis == "1") 
+    string numberstr= String.Empty;
+    if (axis == "x") 
     {
-        result = double.Parse(coordinates.Substring(0,comma-1));
+        numberstr = coordinates.Substring(0,comma);
+        result = double.Parse(numberstr);
     }
-    if (axis == "2")
+    if (axis == "y")
     {
-        result = double.Parse(coordinates.Substring(comma+1,coordinates.Length));
+        numberstr = coordinates.Substring(comma+1);
+        result = double.Parse(numberstr);
     }
 
     return result;
 }
+
+double powerx(double based, int power)
+{
+    double result = 1;
+    for (int i = 0; i<power;i++)
+    {
+        result=result*based;
+    }
+    return result;
+}
+
+
+string coordinates1 = prompt ("Input coorinates in the form x1,y1");
+string coordinates2 = prompt ("Input coorinates in the form x2,y2");
+// string coordinates1= "111,222";
+// double x1=Coordinate(coordinates1,"x");
+// double y1=Coordinate(coordinates1,"y");
+// Console.WriteLine(x1);
+// Console.WriteLine(y1);
+double x1 = Coordinate (coordinates1,"x");
+double y1 = Coordinate (coordinates1,"y");
+double x2 = Coordinate (coordinates2,"x");
+double y2 = Coordinate (coordinates2,"y");
+
+Console.WriteLine(x1+" "+y1+", "+x2+" "+y2);
+double distance= Math.Sqrt (powerx(x1-x2,2)+powerx(y1-y2,2));
+Console.WriteLine($"The distance between {coordinates1} and {coordinates2} is {distance}");
