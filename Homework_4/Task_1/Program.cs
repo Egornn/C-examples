@@ -5,10 +5,6 @@ int promptNumber (string message)
     int number = int.Parse(Console.ReadLine());
     return number;
 }
-
-int A = promptNumber("Input the base of power ");
-int B = promptNumber("Input the power ");
-
 int powerNat (int based, int power)
 {
     int result = based;
@@ -18,4 +14,7 @@ int powerNat (int based, int power)
     }
     return result;
 }
+
+int A = promptNumber("Input the base of power ");
+int B = promptNumber("Input the power ");
 Console.WriteLine($"{A} to the power {B} is {powerNat(A, B)}");
