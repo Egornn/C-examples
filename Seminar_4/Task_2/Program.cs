@@ -9,9 +9,9 @@ int prompt (string message)
 int factorial (int N)// 5
 {
     int result = 1;
-    for (int i=2; i <= N; i++) //1 до 5||i=2||i=3||i=4||i=5
+    for (int i=2; i <= N; i++) //2 до 5||i=2||i=3||i=4||i=5
     {
-        result = result*i;// 1*1=1||1*2=2||2*3=6||6*4=24||24*5=120
+        result = result*i;// 1*2=2||2*3=6||6*4=24||24*5=120
     }
     return result;
 }
