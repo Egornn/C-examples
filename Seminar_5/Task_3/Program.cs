@@ -18,6 +18,7 @@ int search2digit (int [] array)
     }
     return result;
 }
-
-int [] array=initArray (123,0,123);
-Console.WriteLine(search2digit(array));
+string elstr =Console.ReadLine();
+int el = int.Parse(elstr);
+int [] array=initArray (el,0,123);
+Console.WriteLine($"Число элементов в промежутке (10, 99) в случайном массиве из {el} элементов - {search2digit(array)}");
