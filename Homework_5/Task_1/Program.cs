@@ -15,3 +15,13 @@ int [] RandomArray (int len, int min, int max)
     RngArray[i]= new Random().Next(min,max);
     return RngArray;
 }
+
+void PrintArray (int [] array)
+{
+    Console.Write("[");
+    for (int i=0; i<array.Length-1; i++)
+    {
+        Console.Write(array[i]+", ");
+    }
+    Console.WriteLine(array[array.Length-1]+"]");
+}
