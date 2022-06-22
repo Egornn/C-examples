@@ -37,4 +37,22 @@ void PrintArray(string [,] matrix)
     }
 }
 
+void FillTheImage (string [,] matrix, int y0, int x0)
+{
+    if (matrix[y0,x0]==" ")
+    {
+        matrix[y0,x0]="!";
+        FillTheImage(matrix, y0-1,x0);
+        FillTheImage(matrix, y0,x0-1);
+        FillTheImage(matrix, y0+1,x0);
+        FillTheImage(matrix, y0,x0+1);
+    }
+}
+
+PrintArray(pic);
+int y0=pic.GetLength(0)/2;
+int x0=pic.GetLength(1)/2;
+FillTheImage(pic, y0,x0);
+Console.WriteLine(pic.GetLength(0));
+Console.WriteLine(pic.GetLength(1));
 PrintArray(pic);
