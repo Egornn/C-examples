@@ -59,6 +59,7 @@ double powerx(double based, int power)
 
 string coordinates1 = prompt ("Input coorinates in the form x1.y1.z1");
 string coordinates2 = prompt ("Input coorinates in the form x2.y2.z2");
+string coordinates3 = prompt ("Input coorinates in the form x3.y3.z3");
 // string coordinates1= "111,222";
 // double x1=Coordinate(coordinates1,"x");
 // double y1=Coordinate(coordinates1,"y");
@@ -70,13 +71,23 @@ double x2 = Coordinate (coordinates2,"x");
 double y2 = Coordinate (coordinates2,"y");
 double z2 = Coordinate (coordinates2,"z");
 
+double x3 = Coordinate (coordinates3,"x");
+double y3 = Coordinate (coordinates3,"y");
+double z3 = Coordinate (coordinates3,"z");
  Console.WriteLine(x1);
  Console.WriteLine(y1);
  Console.WriteLine(z1);
  Console.WriteLine(x2);
  Console.WriteLine(y2);
  Console.WriteLine(z2);
+ Console.WriteLine(x3);
+ Console.WriteLine(y3);
+ Console.WriteLine(z3);
 
 
-double distance= Math.Sqrt (powerx(x1-x2,2)+powerx(y1-y2,2)+powerx(z1-z2,2));
-Console.WriteLine($"The distance between {coordinates1} and {coordinates2} is {distance}");
+double distance12= Math.Sqrt (powerx(x1-x2,2)+powerx(y1-y2,2)+powerx(z1-z2,2));
+double distance13= Math.Sqrt (powerx(x1-x3,2)+powerx(y1-y3,2)+powerx(z1-z3,2));
+double distance23= Math.Sqrt (powerx(x3-x2,2)+powerx(y3-y2,2)+powerx(z3-z2,2));
+Console.WriteLine($"The distance between {coordinates1} and {coordinates2} is {distance12}");
+Console.WriteLine($"The distance between {coordinates1} and {coordinates3} is {distance13}");
+Console.WriteLine($"The distance between {coordinates2} and {coordinates3} is {distance23}");
