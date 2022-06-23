@@ -7,6 +7,7 @@ int promptNumber (string message)
 }
 int powerNat (int based, int power)
 {
+    if (power ==0) return 1;
     int result = based;
     for (int i = 1; i<power; i++)
     {
