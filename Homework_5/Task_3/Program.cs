@@ -49,4 +49,4 @@ double min = promptD("Insert the bottom bound of the array: ");
 double max = promptD("Insert the upper bound the array: ");
 double [] myarray = RandomArray (len, min, max);
 PrintArray(myarray);
-Console.WriteLine($"The difference between Maximum and Minimum in the array is {MinMaxDiff(myarray)}");
+Console.WriteLine($"The difference between Maximum and Minimum in the array is {MinMaxDiff(myarray):f2}");
