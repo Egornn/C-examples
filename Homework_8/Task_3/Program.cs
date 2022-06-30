@@ -58,10 +58,10 @@ int [,] MatrixMultiplication(int[,] matrixA, int [,] matrixB)
 
 void Solve()
 {
-    int n = 2;
-    int m = 3;
-    int o = 3;
-    int p = 4;
+    int n = 2; //rows in the first matrix
+    int m = 3; //columns in the first matrix
+    int o = 3; //rows in the second matrix
+    int p = 4; //columns in the second matrix
 
     int min = 0;
     int max = 10;
