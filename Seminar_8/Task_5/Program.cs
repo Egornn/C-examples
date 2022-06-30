@@ -5,10 +5,10 @@ void PrintArray (int [,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (matrix[i, j] == 0) { System.Console.Write(""); }
+            if (matrix[i, j] == 0) { System.Console.Write(" \t"); }
             else
             {
-                Console.Write($"{matrix[i, j]}" + " ");
+                Console.Write($"{matrix[i, j]}" + "\t");
             }
         }
         Console.WriteLine();
@@ -32,5 +32,5 @@ void Pascal(int N)
     PrintArray(massive);
 
 }
-Pascal(20);
+Pascal(7);
 
