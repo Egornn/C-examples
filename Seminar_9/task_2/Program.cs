@@ -1,6 +1,6 @@
 ﻿//Натуральные от 1 до N рекурсией
 
-void RecursiveMToN (int M, int N)
+void RecursiveMToN (int M, int N )
 {
     if (N<M) 
     {
