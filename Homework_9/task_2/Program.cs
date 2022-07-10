@@ -11,6 +11,7 @@ int RecursiveMToNSum (int M, int N )
         {
             total=M+RecursiveMToNSum(M + 1, N);
             return total;
+        
         }
     }
 
@@ -27,7 +28,7 @@ void Solve()
 {
     int m = Prompt("Insert bottom boundary");
     int n = Prompt("Insert upper boundary");
-    System.Console.WriteLine( RecursiveMToNSum(m,n));
+    System.Console.WriteLine(RecursiveMToNSum(m,n));
 
 }
 
