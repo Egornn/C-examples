@@ -6,7 +6,14 @@ void RecursiveNLetter (int wordLength, string [] alphabet, string currentWord = 
 {
     if (wordLength==0) 
     {
-        System.Console.Write($"{currentWord}, ");
+        if (currentWord==new string (Convert.ToChar (alphabet[alphabet.Length-1]), currentWord.Length))
+        {
+            System.Console.WriteLine($"{currentWord}.");    
+        }
+        else
+        {
+            System.Console.Write($"{currentWord}, ");
+        }
     }
     else
     {
