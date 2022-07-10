@@ -9,7 +9,7 @@ void RecursiveNReversed (int N)
     else
     {
         {
-            Console.Write($"{N%10} ");
+            System.Console.Write($"{N%10} ");
             RecursiveNReversed(N/10);
         }
     }
